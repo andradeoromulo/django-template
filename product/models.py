@@ -7,3 +7,6 @@ class Product(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to='products/')
     created_at = models.DateTimeField(default=datetime.now)
+
+    def __str__(self):
+        return self.name
